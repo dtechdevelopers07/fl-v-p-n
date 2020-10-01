@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo $SH_DATA;
 response=$(curl -k -d "$SH_DATA&type=0" -X POST $API_LINK); 
 STATE=$(echo $response | jq ."state" | sed -e 's/^"//' -e 's/"$//');
