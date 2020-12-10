@@ -1,10 +1,10 @@
 # Hosting url to be used for adding server entry to database and show progress on web
-_DOMAIN="panel.frontline-vpn.com"
-HOSTING_DOMAIN="https://panel.frontline-vpn.com/";
+_DOMAIN=$(echo "cGFuZWwuZnJvbnRsaW5lLXZwbi5jb20K" | base64 --decode)
+HOSTING_DOMAIN="https://"$_DOMAIN"/";
 #url for progress
-PROGRESS_URL="https://panel.frontline-vpn.com/progress/";
+PROGRESS_URL=$HOSTING_DOMAIN"progress/";
 #url fot adding record to database;
-RECORD_URL="https://panel.frontline-vpn.com/serve";
+RECORD_URL=$HOSTING_DOMAIN"serve";
 # Some API Authentication Configuration
 API_URL=\"$_DOMAIN\";
 API_SSL="1";
